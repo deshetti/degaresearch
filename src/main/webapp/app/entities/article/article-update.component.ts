@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { IArticle } from 'app/shared/model/article.model';
+import { IArticle } from '../../shared/model/article.model';
 import { ArticleService } from './article.service';
 
 @Component({
@@ -13,6 +13,7 @@ import { ArticleService } from './article.service';
 export class ArticleUpdateComponent implements OnInit {
     private _article: IArticle;
     isSaving: boolean;
+    textEditor: string;
 
     constructor(private articleService: ArticleService, private activatedRoute: ActivatedRoute) {}
 

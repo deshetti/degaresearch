@@ -7,7 +7,14 @@
       "root": "",
       "sourceRoot": "src/main/webapp",
       "projectType": "application",
-      "architect": {}
+      "architect": {},
+      "styles": [
+    		"./node_modules/quill/dist/quill.core.css", 
+    		"./node_modules/quill/dist/quill.snow.css"
+  ],
+  "scripts": [
+    		"../node_modules/quill/dist/quill.js"
+  ]
     }
   },
   "defaultProject": "degaresearch",

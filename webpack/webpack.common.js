@@ -73,6 +73,7 @@ module.exports = (options) => ({
             $: "jquery",
             jQuery: "jquery"
         }),
+        new webpack.ProvidePlugin({ Quill: "Quill" }),
         new HtmlWebpackPlugin({
             template: './src/main/webapp/index.html',
             chunksSortMode: 'dependency',

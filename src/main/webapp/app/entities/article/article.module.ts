@@ -1,7 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { DegaresearchSharedModule } from 'app/shared';
+import { DegaresearchSharedModule } from '../../shared';
+import { EditorModule } from 'primeng/editor';
 import {
     ArticleComponent,
     ArticleDetailComponent,
@@ -15,7 +16,7 @@ import {
 const ENTITY_STATES = [...articleRoute, ...articlePopupRoute];
 
 @NgModule({
-    imports: [DegaresearchSharedModule, RouterModule.forChild(ENTITY_STATES)],
+    imports: [DegaresearchSharedModule, EditorModule, RouterModule.forChild(ENTITY_STATES)],
     declarations: [
         ArticleComponent,
         ArticleDetailComponent,

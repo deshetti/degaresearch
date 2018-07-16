@@ -22,16 +22,34 @@
                 </div>
                 <div class="form-group">
                     <label class="form-control-label" for="field_message">Message</label>
-                    <input type="text" class="form-control" name="message" id="field_message"
+                    <!-- <input type="text" class="form-control" name="message" id="field_message"
                         [(ngModel)]="article.message" required/>
                     <div [hidden]="!(editForm.controls.message?.dirty && editForm.controls.message?.invalid)">
                         <small class="form-text text-danger"
                         [hidden]="!editForm.controls.message?.errors?.required">
                         This field is required.
                         </small>
-                    </div>
+                    </div> -->
+                    
+                   <p-editor [(ngModel)]="textEditor" name="textEditor" [style]="{'height':'320px'}" ngDefaultControl></p-editor> 
+                   
+    <p-header>
+        <span class="ql-format-group">
+            <span title="Bold" class="ql-format-button ql-bold"></span>
+            <span class="ql-format-separator"></span>
+            <span title="Italic" class="ql-format-button ql-italic"></span>
+            <span class="ql-format-separator"></span>
+            <span title="Underline" class="ql-format-button ql-underline"></span>
+            <span class="ql-format-separator"></span>
+            <span title="Strikethrough" class="ql-format-button ql-strike"></span>
+        </span>
+    </p-header>
+</p-editor>
+                    
+                    <!-- End -->
                 </div>
-
+                <div>
+                </div>
             </div>
             <div>
                 <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
